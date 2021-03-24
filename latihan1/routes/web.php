@@ -16,15 +16,10 @@ use App\Http\Resources;
 |
 */
 
-// Route::get('/', function () {
-// return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/user', [ManagementUserController::class, 'index']);
-Route::get('/create', [ManagementUserController::class, 'create']);
-// Route::get('/show/{id}', function ($id) {
-//     return 'user' . $id;
-// });
-// Route::get('/show/{id}'[ManagementUserController::class], 'show');
-
-// Route::resource('user', 'ManagementUserController');
+// Route::get('user', [ManagementUserController::class, 'index']);
+// Route::get('/create', [ManagementUserController::class, 'create']);
+Route::resource('user', ManagementUserController::class);

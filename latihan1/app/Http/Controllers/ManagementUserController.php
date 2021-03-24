@@ -13,7 +13,8 @@ class ManagementUserController extends Controller
      */
     public function index()
     {
-        return "hello world";
+        // return "halo ini adalah method index, dalam controller ManagementUser"?
+        return "method ini nantinya digunakan untuk mengambil semua data user";
     }
 
     /**
@@ -23,7 +24,7 @@ class ManagementUserController extends Controller
      */
     public function create()
     {
-        return "menampilkan form";
+        return "method ini nantinya digunakan untuk menampilkan form untuk menambah data user";
     }
 
     /**
@@ -34,7 +35,7 @@ class ManagementUserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "method ini digunakan untuk menciptakan data user yang baru";
     }
 
     /**
@@ -45,7 +46,7 @@ class ManagementUserController extends Controller
      */
     public function show($id)
     {
-        return "id yang akan diganti adalah " . $id;
+        return "method ini nantinya akan digunakan untuk mengambil satu data user dengan id-" . $id;
     }
 
     /**
@@ -56,7 +57,7 @@ class ManagementUserController extends Controller
      */
     public function edit($id)
     {
-        //
+        return "Method ini nantinya digunakan untuk menampilkan form untuk mengubah data edit dengan id=" . $id;
     }
 
     /**
@@ -68,7 +69,7 @@ class ManagementUserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return "Method ini nantinya akan digunakan untuk mengubah data user dengan id=" . $id;
     }
 
     /**
@@ -79,6 +80,6 @@ class ManagementUserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return "Method ini digunakan untuk menghapus data user dengan id=" . $id;
     }
 }
