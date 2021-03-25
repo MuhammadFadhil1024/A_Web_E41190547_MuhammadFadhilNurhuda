@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Iluminate\HTTP\Request;
 use App\Http\Controllers\ManagementUserController;
+use App\Http\Controllers\HomeController;
 use App\Http\Resources;
 
 /*
@@ -16,10 +17,12 @@ use App\Http\Resources;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// Route::get('/home', function () {
+//     return view('home');
+// });
+// Route::get('/home', 'ManagementUserController@home');
+// Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [ManagementUserController::class, 'index']);
 // Route::get('user', [ManagementUserController::class, 'index']);
 // Route::get('/create', [ManagementUserController::class, 'create']);
-Route::resource('user', ManagementUserController::class);
+// Route::resource('user', ManagementUserController::class);
