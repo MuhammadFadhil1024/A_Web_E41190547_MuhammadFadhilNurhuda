@@ -22,7 +22,13 @@ use App\Http\Resources;
 // });
 // Route::get('/home', 'ManagementUserController@home');
 // Route::get('/', [HomeController::class, 'index']);
-Route::get('/home', [ManagementUserController::class, 'index']);
+// Route::get('/home', [ManagementUserController::class, 'index']);
+Route::group(['namespace' => 'Frontend'], function () {
+    Route::resource('home', 'HomeController');
+});
+Route::group(['namespace' => 'Backend'], function () {
+    Route::resource('dashboard', 'DashboardController');
+});
 // Route::get('user', [ManagementUserController::class, 'index']);
 // Route::get('/create', [ManagementUserController::class, 'create']);
 // Route::resource('user', ManagementUserController::class);
